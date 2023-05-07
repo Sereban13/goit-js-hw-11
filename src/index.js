@@ -1,3 +1,4 @@
+import './css/style.css';
 import axios from 'axios';
 import Notiflix from 'notiflix';
 
@@ -9,7 +10,7 @@ const loadBtn = document.querySelector('.load-more');
 const BASE_URL = 'https://pixabay.com/api/';
 const API_KEY = '36106803-d64240cda904fbe2d47e1c8e1';
 
-let currentPage = 11;
+let currentPage = 1;
 let searchQuery = '';
 
 function onSubmit(event) {
@@ -79,7 +80,10 @@ function galleryCraete(photoGallery) {
     .map(
       ({ webformatURL, tags, likes, views, comments, downloads }) => `
       <div class="photo-card">
-  <img src="${webformatURL}" alt="${tags}" loading="lazy" />
+      <div class="thumb">
+      <img src="${webformatURL}" alt="${tags}" loading="lazy" />
+      </div>
+  
   <div class="info">
     <p class="info-item">
       <b>Likes:${likes}</b>

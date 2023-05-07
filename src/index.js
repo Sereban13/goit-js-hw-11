@@ -16,7 +16,7 @@ let searchQuery = '';
 async function onSubmit(event) {
   event.preventDefault();
   currentPage = 1;
-  searchQuery = inputQuery.value;
+  searchQuery = inputQuery.value.trim();
 
   try {
     const responce = await getPhoto(searchQuery, currentPage);
@@ -43,7 +43,7 @@ async function onSubmit(event) {
 
 async function loadNewPagination() {
   currentPage += 1;
-  searchQuery = inputQuery.value;
+  searchQuery = inputQuery.value.trim();
   try {
     const responce = await getPhoto(searchQuery, currentPage);
     const newData = await responce.data;

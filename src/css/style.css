@@ -1,3 +1,19 @@
+body {
+  background-color: rgb(167, 174, 174);
+}
+.header {
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(
+    to right,
+    #f44336 35%,
+    
+    #ffb800);
+  
+}
+.search-form {
+  padding: 10px;
+}
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -6,7 +22,7 @@
   margin: 25px;
 }
 
-/* .thumb {
+.thumb {
     height: 400px;
     width: 300px;
   }
@@ -16,4 +32,61 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-  } */
+  }
+.photo-card {
+  padding: 2px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: aliceblue;
+}
+
+  .button {
+    min-width: 100px;
+    border-color: transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 5px 10px;
+
+    background-color: rgb(68, 235, 68);
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875; 
+    letter-spacing: 0.06em;
+    
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button:hover,
+.button:focus {
+    background-color: rgb(23, 234, 195);
+}
+
+.load-more {
+  padding-left: auto;
+}
+
+.input {
+  /* width: 100%; */
+  height: 45px;
+  padding-left: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  outline: none;
+  background-color: rgb(177, 230, 221);
+}
+
+::placeholder {
+  color:#090702;
+}
+
+.footer {
+  height: 70px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}

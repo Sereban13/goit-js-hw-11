@@ -23,6 +23,7 @@ async function onSubmit(event) {
     const newData = await responce.data;
     if (newData.hits.length === 0) {
       loadBtn.hidden = true;
+      photoResults.innerHTML = '';
       Notiflix.Notify.failure(
         'Sorry, there are no images matching your search query. Please try again.'
       );
